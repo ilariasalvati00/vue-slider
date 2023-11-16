@@ -38,6 +38,7 @@ const options = {
             else{
                 this.i--;
             }
+            clearInterval(this.timer);
         },
         next: function(){
             if (this.i >= this.slides.length - 1){
@@ -46,9 +47,12 @@ const options = {
             else{
                 this.i = this.i + 1;
             }
+            clearInterval(this.timer)
+            this.timer = setInterval(this.next, 3000);
         },
         active: function(indice){
             this.i = indice;
+            clearInterval(this.timer);
         }
     },
 
