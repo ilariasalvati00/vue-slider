@@ -50,6 +50,10 @@ const options = {
         active: function(indice){
             this.i = indice;
         }
+    },
+
+    mounted: function(){
+        this.timer = setInterval(this.next, 3000);
     }
 };
 
